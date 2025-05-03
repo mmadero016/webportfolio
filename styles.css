@@ -282,3 +282,40 @@ body {
   content: url('photos/9.png');
 }
 
+.custom-back-arrow {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  color: #000;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1000;
+  transition: transform 0.2s ease;
+}
+
+.custom-back-arrow:hover {
+  transform: translateX(-3px);
+}
+
+.project-section {
+  margin: 60px auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.section-header {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.carousel-container {
+  padding: 10px 0;
+}
+
+.carousel-item img {
+  max-height: 400px;
+  object-fit: contain;
+}

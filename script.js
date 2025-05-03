@@ -103,6 +103,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+const nameThank = "Thank you!";
+const titleThank = "Return to site using button below.";
+
+const titleTy1 = document.getElementById("typed-thank");
+const titleTy2 = document.getElementById("typed-thanks");
+
+function typeWriter(text, element, index, callback) {
+  if (index === 0) element.textContent = ""; // Clear previous
+  if (index < text.length) {
+    element.textContent += text.charAt(index);
+    setTimeout(() => {
+      typeWriter(text, element, index + 1, callback);
+    }, 100);
+  } else if (callback) {
+    setTimeout(callback, 300);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (titleTy1 && titleTy2) {
+    typeWriter(nameThank, titleTy1, 0, () => {
+      typeWriter(titleThank, titleTy2, 0);
+    });
+  }
+});
+
+
 const skillButtons = document.querySelectorAll('.skill-btn');
 
 skillButtons.forEach(button => {
@@ -124,6 +151,7 @@ function updateNavbarStyle() {
     window.location.pathname.includes("index.html") ||
     window.location.pathname.includes("gallery.html") ||
     window.location.pathname.includes("about.html") ||
+    window.location.pathname.includes("contact.html") ||
     window.location.pathname.includes("contact.html") ||
     window.location.pathname === "/";
 
