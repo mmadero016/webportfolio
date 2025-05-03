@@ -54,26 +54,34 @@
     </section>
 
         <main id="main-content" class="container content-wrapper scroll-slide-up">
-            <section class="contact-section py-5">
-                <div class="container">
-                <h2 class="fw-bold text-decoration-underline">Contact</h2>
-                <br>
-                <form>
-                    <div class="mb-3">
-                    <label>Name:</label>
-                    <input type="text" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                    <label>Email:</label>
-                    <input type="email" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                    <label>Description:</label>
-                    <textarea class="form-control" rows="4"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-success">Submit</button>
-                </form>
-            </section>
+          <section class="contact-section py-5">
+            <div class="container">
+              <h2 class="fw-bold text-decoration-underline">Contact</h2>
+              <br>
+              <form action="https://formsubmit.co/mamadero@syr.edu" method="POST">
+                <!-- Prevents spam -->
+                <input type="hidden" name="_captcha" value="false">
+                          
+                <div class="mb-3">
+                  <label for="name">Name:</label>
+                  <input type="text" name="name" class="form-control" required>
+                </div>
+          
+                <div class="mb-3">
+                  <label for="email">Email:</label>
+                  <input type="email" name="email" class="form-control" required>
+                </div>
+          
+                <div class="mb-3">
+                  <label for="message">Description:</label>
+                  <textarea name="message" rows="4" class="form-control" required></textarea>
+                </div>
+          
+                <button type="submit" class="btn btn-success">Submit</button>
+              </form>
+            </div>
+          </section>
+          
 <div class="container text-center my-4 scroll-slide-up">
     <hr class="w-85 mx-auto">
   </div>
@@ -86,7 +94,7 @@
                 </div>
             </section>
 <br>
-        </main>
+    </main>
 
 
     <!-- footer -->  

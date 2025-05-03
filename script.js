@@ -103,8 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
-// === Skill Toggle Logic ===
 const skillButtons = document.querySelectorAll('.skill-btn');
 
 skillButtons.forEach(button => {
@@ -112,30 +110,15 @@ skillButtons.forEach(button => {
     const desc = button.nextElementSibling;
     const isOpen = desc.style.display === 'block';
     
-    // Toggle visibility
     desc.style.display = isOpen ? 'none' : 'block';
     button.classList.toggle('open', !isOpen);
   });
 });
 
-// === Glow Effect on More Button ===
-const glowMoreBtn = document.getElementById("glowMoreBtn");
-
-if (glowMoreBtn) {
-  glowMoreBtn.addEventListener("mouseenter", () => {
-    glowMoreBtn.classList.add("glow-white");
-  });
-
-  glowMoreBtn.addEventListener("mouseleave", () => {
-    glowMoreBtn.classList.remove("glow-white");
-  });
-}
-
-// === Navbar Transparency Scroll Logic ===
 const nav = document.getElementById('mainNav');
 
 function updateNavbarStyle() {
-  if (!nav) return; // If no nav, stop running
+  if (!nav) return; 
 
   const isHomePage = 
     window.location.pathname.includes("home.html") ||
@@ -163,14 +146,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   
 if (nav) {
-  // Initial check on page load
   updateNavbarStyle();
-
-  // Watch scroll changes
   window.addEventListener('scroll', updateNavbarStyle);
 }
-
-
 
 
 const scrollArrow = document.getElementById("scrollArrow");
@@ -179,7 +157,6 @@ const landing = document.getElementById("landing");
 window.addEventListener("scroll", () => {
   const landingBottom = landing.getBoundingClientRect().bottom;
 
-  // Disappear sooner (tweak divisor for earlier/later)
   if (landingBottom <= window.innerHeight / 1.5) {
     scrollArrow.classList.add("hidden");
   } else {
@@ -195,7 +172,6 @@ if (scrollArrow && targetSection) {
 }
 
 
-// === Scroll Slide-Up Animation ===
 const scrollElements = document.querySelectorAll('.scroll-slide-up');
 
 function elementInView(el, offset = 100) {
@@ -225,7 +201,6 @@ function handleScrollAnimation() {
 
 window.addEventListener('scroll', handleScrollAnimation);
 
-// Run once on page load to reveal any in view
 handleScrollAnimation();
 
 
