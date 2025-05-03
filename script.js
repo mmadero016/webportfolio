@@ -121,7 +121,7 @@ function updateNavbarStyle() {
   if (!nav) return; 
 
   const isHomePage = 
-    window.location.pathname.includes("home.html") ||
+    window.location.pathname.includes("index.html") ||
     window.location.pathname.includes("gallery.html") ||
     window.location.pathname.includes("about.html") ||
     window.location.pathname.includes("contact.html") ||
